@@ -1,0 +1,66 @@
+body{
+    background: #f5f5f5;
+    font-family: 'Oswald', sans-serif;
+    background: url('/img/photo-1547197.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+
+.navbar{
+    background: rgba(0, 0, 0, 0.745)!important;
+}
+
+.picture{
+    width: 21,5rem; 
+    height: 14rem;
+}
+
+.sign{
+    /* position: absolute;
+     top: 40%;
+    left: 50%; */ 
+    /* transform: translate(-50%, -50%); */
+     background: rgba(0, 0, 0, 0.465);
+    /*text-align: center; */
+    color: white;
+}
+
+.sign input[type = "text"],.sign input[type = "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin:20px auto;
+    text-align: center;
+    border: 2px solid #df2911d5;
+    color: white;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.sign input[type = "text"]:focus,.sign input[type = "password"]:focus{
+    width: 280px;
+    border-color: #e5e914ec;
+}
+
+.sign button[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin:20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    color: white;
+}
+
+.sign button[type = "submit"]:hover{
+    background: #39d113b0;
+}

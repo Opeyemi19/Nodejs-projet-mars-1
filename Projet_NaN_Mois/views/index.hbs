@@ -1,0 +1,39 @@
+<div class="container p-4">
+    <div class="row">
+        {{!-- On parcourt ici la valeur de l'objet qui contient nos donnees selectionner en ds a la BD --}}
+        {{#each links}}
+            {{!-- Avec le {{this}} on retoune un "Objet" --}}
+                {{!-- {{this}} --}}
+            <div class="col-md-3 mt-4">
+                <div class="card text-center">
+                    <img src="uploads/{{image}}" alt="" class="card-img-top picture">
+                    <div class="card-body">
+                        <h3>{{ name_pain }}</h3>
+                        <span class="card">
+                            Prix:<span class="badge badge-pill badge-dark mx-auto">{{ price_pain }} Fcfa</span>
+                        </span>
+                        <hr>
+                        {{!-- <p class="m-2">{{description}}</p> --}}
+                        {{!-- <p>{{timeago created_at}}</p> --}}
+                        <div class="d-flex">
+                            {{!-- {{#if user}} --}}
+                                <a href="/{{id}}" class="btn btn-outline-danger ml-3 mr-3">+ Infos</a>
+                                <form action="/profil" method="post">
+                                    <input type="hidden" name="name_prod" value="{{name_pain}}">
+                                    <input type="hidden" name="price_prod" value="{{price_pain}}">
+                                    <input type="hidden" name="image" value="{{image}}">
+                                    <button type="submit" class="btn btn-outline-warning">Commander</button>
+                                </form>
+
+                            {{!-- {{else}}
+                                <a href="/{{id}}" class="btn btn-outline-danger mr-3">+ Infos</a>
+                            {{/if}} --}}
+                        </div>
+                          
+                          {{!-- <a href="/profil/{{id}}" class="btn btn-outline-secondary">Ajouter</a> --}}
+                    </div>
+                </div>
+            </div>
+        {{/each}} 
+    </div>
+</div>
